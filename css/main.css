@@ -1,0 +1,63 @@
+/*Reset*/
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font: 16px Tahoma, sans-serif; background: #ccc; color: #333; }
+
+h1, h2, h3 {font-weight: normal;}
+h1 { margin-bottom: 20px;}
+p {line-height: 1.4; margin-bottom: 10px;}
+p:last-of-type {margin-bottom: 0;}
+a {text-decoration: none; color: #8892BF; }
+a:hover{color: #333;}
+
+/* Rules */
+.white { background: #fff}
+
+/* Main */
+
+#wrapper {
+    width: 990px;
+    margin: 0 auto;
+}
+#header {
+    height:138px ;
+    margin-bottom: 20px;
+    background: url("../img/header.jpg") no-repeat ;
+}
+#container {
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+#side {
+    float: left;
+    width: 270px;
+
+}
+#content {
+    margin-left: 290px;
+    width: 700px;
+
+    height: 500px;
+}
+#footer {
+    padding: 0 0 20px;
+    color: #999;
+}
+
+
+/*Menu*/
+.nav {}
+.nav h3 {
+    padding: 15px 20px;
+    background: #8892BF;
+    color: white;
+}
+.nav ul {}
+.nav ul li {}
+.nav ul li a {
+    display: block;
+    padding: 15px 20px;
+    border-bottom:  1px solid #f1f1f1;
+}
+.nav ul li a.active {
+    color: #333;
+}
