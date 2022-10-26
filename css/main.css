@@ -3,14 +3,19 @@
 body { font: 16px Tahoma, sans-serif; background: #ccc; color: #333; }
 
 h1, h2, h3 {font-weight: normal;}
-h1 { margin-bottom: 20px;}
+h1 { margin-bottom: 20px; padding: 10px;}
 p {line-height: 1.4; margin-bottom: 10px;}
-p:last-of-type {margin-bottom: 0;}
+p:last-of-type {margin-bottom: 0;margin-left: 6px;}
 a {text-decoration: none; color: #8892BF; }
 a:hover{color: #333;}
 
 /* Rules */
 .white { background: #fff}
+img.photo {
+    margin-bottom: 10px;
+    margin-left: 20px;
+
+}
 
 /* Main */
 
@@ -30,13 +35,10 @@ a:hover{color: #333;}
 #side {
     float: left;
     width: 270px;
-
 }
 #content {
     margin-left: 290px;
     width: 700px;
-
-    height: 500px;
 }
 #footer {
     padding: 0 0 20px;
@@ -61,3 +63,41 @@ a:hover{color: #333;}
 .nav ul li a.active {
     color: #333;
 }
+
+/* News */
+.news {margin-top: 10px}
+.news .item {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding: 10px 0;
+}
+.news .item:last-of-type {
+    margin-bottom: 0;
+}
+.news .item .photo {
+    width: 130px;
+    height: 130px;
+    float: left;
+    background-repeat: no-repeat;
+    margin-left: 10px;
+}
+.news .item .info {
+    margin-left: 150px;
+    width: 500px;
+}
+.news .item .info .heading {
+    margin-bottom: 10px;
+}
+.news .item .info .heading a {
+    font-size: 20px;
+}
+.news .item .info .date {
+    margin-bottom: 10px;
+    color: #999;
+}
+.news .item .info .descr {
+    height: 65px;
+    overflow: hidden;
+}
+

@@ -1,9 +1,20 @@
 <?php
+// DB connection
+require_once('inc/connect.php');
 //get page
 if (isset($_GET['page']) && file_exists('inc/pages/'.$_GET['page'].'.php')) {
     $page = $_GET['page'];
 } else {
     $page = 'home';
+}
+// page data
+if ($page != 'item') {
+
+    $sql = mysqli_query($con, "SELECT * FROM `pages` WHERE `name`='$page'");
+    $row = mysqli_fetch_assoc($sql);
+    $title = $row['title'];
+    $meta_d = $row['meta_d'];
+    $descr = $row['meta_d'];
 }
 
 
@@ -14,11 +25,10 @@ if (isset($_GET['page']) && file_exists('inc/pages/'.$_GET['page'].'.php')) {
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="description" content="<?=$meta_d ?>">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/main.css">
-    <title>PHP - պարզ, դինամիկ վեբ կայք</title>
+    <title><?=$title; ?></title>
 </head>
 <body>
     <div id="wrapper">
